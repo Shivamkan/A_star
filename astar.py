@@ -156,6 +156,9 @@ def astar(start, goal):
 		openset.extend(openset2)
 		closeset2 = []
 		openset2 = []
+		if len(openset) < 1 and not over:
+			over = True
+			print("There is no path")
 		pygame.display.flip()
 		if not over:
 			win = openset[0]
